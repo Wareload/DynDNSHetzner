@@ -78,6 +78,9 @@ func updateHetznerRecord(curIPv4 *string, newIPv4 string) {
 		} else {
 			log("Error while updating, code: " + res.Status)
 		}
+	} else {
+		log("Missing environment variables")
+		os.Exit(1)
 	}
 }
 
